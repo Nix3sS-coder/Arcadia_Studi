@@ -33,14 +33,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Dossier où les images seront sauvegardées
         $uploadDir = '../../../Assets/Ajouts/';
-
+        $uploadFile = $uploadDir . $randomFileName;
         // Créer le dossier s'il n'existe pas
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
         }
 
+        while(file_exist($uploadFile)){
+            $randomFileName = generateRandomString() . '.' . $fileExtension;
+
+            // Dossier où les images seront sauvegardées
+            $uploadDir = '../../../Assets/Ajouts/';
+            $uploadFile = $uploadDir . $randomFileName;
+        }
         // Chemin complet pour sauvegarder le fichier avec le nom aléatoire
-        $uploadFile = $uploadDir . $randomFileName;
+        
 
         // Déplacer le fichier téléchargé vers le dossier de destination
         if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {

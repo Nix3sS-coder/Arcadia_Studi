@@ -24,7 +24,7 @@
             <h2> Presentation </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, a. Eius excepturi, at tenetur alias inventore dignissimos, perferendis animi nihil numquam necessitatibus sunt amet. Officiis veritatis, nihil praesentium aut quibusdam velit eveniet expedita officia impedit ratione perferendis, fugiat provident aliquam consectetur saepe accusamus libero, necessitatibus id? Alias tenetur illum excepturi.<p>
             <div id="imgzoo"> 
-                <img src="Assets/ZOO1.jpg">
+                <img src="Assets/zoo1.jpg">
                 <img src="Assets/zoo2.jpg">
             </div>
         </article>

@@ -45,12 +45,12 @@ function create_secure_cookie($name, $data) {
                 exit; // Assurez-vous de sortir du script après une redirection header
             } else {
                 // Mot de passe invalide
-                header('Location: /login.php?status=error');
+                header('Location: /Login.php?status=error');
                 exit; // Sortie du script après la redirection
             }
         } else {
             // Aucun utilisateur trouvé avec cet email
-            header('Location: /login.php?status=error');
+            header('Location: /Login.php?status=error');
             exit; // Sortie du script après la redirection
         }
     }

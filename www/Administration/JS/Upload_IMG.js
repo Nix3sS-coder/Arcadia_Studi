@@ -42,17 +42,20 @@ function changeimg(imgPath, value) {
     let imgElement = document.getElementById(lastclickimg);
     // Trouver la position de "IMG"
     let pos = lastclickimg.indexOf("img");
-
+    let suffixe = "";
     if (pos !== -1) {
         // Extraire la partie de la chaîne après "img"
-        let suffixe = lastclickimg.substring(pos + 3); // +3 pour sauter "img"
-
+        let suffixe= lastclickimg.substring(pos + 3); // +3 pour sauter "img"
+        console.log("nv :" + value + 'img'+suffixe);
         // Mettre à jour l'ID de l'élément img avec la valeur et le suffixe
         imgElement.id = value + 'img'+suffixe;
+        console.log(lastclickimg)
+        let imgElement2 = document.getElementById(value + 'img'+suffixe);
+        imgElement2.src = imgPath;
     }
 
-    let imgElement2 = document.getElementById(value + 'img'+suffixe);
-    imgElement2.src = imgPath;
     
     quittchooseimg();
 }
+
+

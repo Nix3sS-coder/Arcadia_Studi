@@ -42,7 +42,7 @@
         if($user_data['role']==1 || $user_data['role']==2){
             echo "<button onclick=\"document.location='Nourriture_historique.php'\">Historique Animaux nourrit</button>";
 
-            echo "<button onclick=\"document.location='CR_Historique.php'\">Historique CR veterinaire</button>";
+            echo "<button onclick=\"document.location='CR_historique.php'\">Historique CR veterinaire</button>";
 
         }
         if($user_data['role']==3 || $user_data['role']==1){

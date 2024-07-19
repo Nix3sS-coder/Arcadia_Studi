@@ -1,0 +1,26 @@
+/* Fichier styles.css */
+
+/* Définir la police de base pour le corps de la page */
+body {
+    font-family: 'Merriweather', serif;
+}
+
+/* Appliquer la police aux titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Appliquer la police aux paragraphes */
+p {
+    font-family: 'Merriweather', serif;
+}
+
+/* Appliquer la police aux menus */
+nav {
+    font-family: 'Merriweather', serif;
+}
+
+/* Appliquer la police aux autres éléments de texte */
+a, li, span, div {
+    font-family: 'Merriweather', serif;
+}

@@ -11,8 +11,8 @@
                     </body>
                 </html>';
 
-    $headers = 'From: studiarcadia@gmail.com' . "\r\n" .
-               'Reply-To: studiarcadia@gmail.com' . "\r\n" .
+    $headers = 'From: nepasrepondredev@gmail.com' . "\r\n" .
+               'Reply-To: nepasrepondredev@gmail.com' . "\r\n" .
                'X-Mailer: PHP/' . phpversion() . "\r\n" .
                'MIME-Version: 1.0' . "\r\n" .
                'Content-Type: text/html; charset=UTF-8';

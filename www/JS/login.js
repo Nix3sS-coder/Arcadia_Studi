@@ -3,7 +3,7 @@
                 var pwd=document.getElementById('pwd').value
                 if(mail!="" && pwd!=""){ 
                     if (mail.includes('.') && mail.includes('@')) {
-                        document.location.href='login_check.php?mail='+mail+'&pwd='+pwd
+                        document.location.href='Login_check.php?mail='+mail+'&pwd='+pwd
                     }else{
                         alert("Le mail doit être valide")
                     }

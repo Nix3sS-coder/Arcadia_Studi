@@ -4,8 +4,8 @@
 function sendSMTPMail($to, $cc, $bcc, $subject, $message, $headers) {
     $smtpHost = 'smtp.gmail.com';
     $smtpPort = 465;
-    $smtpUser = 'studiarcadia@gmail.com';
-    $smtpPass = 'gcsl kvzn xzqs ezmp';
+    $smtpUser = 'nepasrepondredev@gmail.com';
+    $smtpPass = 'iizt tblv zvfu oqcv';
 
     // Créer un contexte SSL
     $context = stream_context_create([

@@ -3,7 +3,7 @@ try {
     include("PHP/Model/habitat_infos.php");
     
     for($i = 0; $i < count($habitat); $i++) { 
-        echo '<article class="bgelt" onclick="document.location.href=\'Detail_Habitat?habitat=' . htmlspecialchars($habitat[$i]['ID']) . '\'">';
+        echo '<article class="bgelt" onclick="document.location.href=\'Detail_Habitat.php?habitat=' . htmlspecialchars($habitat[$i]['ID']) . '\'">';
         echo '<h3>' . htmlspecialchars($habitat[$i]['Nom']) . '</h3>';
         echo '<p>' . htmlspecialchars($habitat[$i]['description']) . '</p>';
         echo '<div>';

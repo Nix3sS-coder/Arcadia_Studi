@@ -19,8 +19,8 @@ if(isset($_GET["title"]) && isset($_GET["desc"]) && isset($_GET["mail"])) {
                     </body>
                 </html>';
 
-    $headers = 'From: studiarcadia@gmail.com' . "\r\n" .
-               'Reply-To: studiarcadia@gmail.com' . "\r\n" .
+    $headers = 'From: nepasrepondredev@gmail.com' . "\r\n" .
+               'Reply-To: nepasrepondredev@gmail.com' . "\r\n" .
                'X-Mailer: PHP/' . phpversion() . "\r\n" .
                'MIME-Version: 1.0' . "\r\n" .
                'Content-Type: text/html; charset=UTF-8';
@@ -28,6 +28,7 @@ if(isset($_GET["title"]) && isset($_GET["desc"]) && isset($_GET["mail"])) {
     $responses = sendSMTPMail($to, $cc, $bcc, $subject, $message, $headers);
 
     if (is_array($responses) && !empty($responses)) {
+       // print_r($responses);
         echo 'Email envoyé avec succès.';
     } else {
         echo 'L\'envoi de l\'email a échoué.';

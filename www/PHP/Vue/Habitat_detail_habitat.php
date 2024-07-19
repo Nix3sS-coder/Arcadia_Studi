@@ -5,7 +5,7 @@ try{
     include('PHP/Model/animaux_par_habitat_infos.php');
     $habitat=$_GET['habitat'];
     for($i=0; $i<count($animaux);$i++){
-        echo "<article class=\"bgelt\" onclick=\"document.location.href='Detail_Animal.php?Animal=".$animaux[$i]["ID"]."'\">";
+        echo "<article class=\"bgelt\" onclick=\"document.location.href='detail_animal.php?Animal=".$animaux[$i]["ID"]."'\">";
         echo "<h3>".$animaux[$i]["Prenom"].", ".$animaux[$i]["race"]."</h3>";
         echo "<div>";
         $nbphoto=0;

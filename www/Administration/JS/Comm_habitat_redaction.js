@@ -2,7 +2,7 @@ function sendcomm(){
                 let habitat= document.getElementById('habitat-select').value
                 let avis = document.getElementById('avis').value
                 let etat=document.getElementById('etat').value
-                let amelioration = document.getElementById('amelioration').value
+                let amelioration = document.getElementById('amelioration').checked
 
                 if(habitat!=0){
                     if(avis!=""){

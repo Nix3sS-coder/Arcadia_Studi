@@ -22,7 +22,7 @@
                 include($_SERVER['DOCUMENT_ROOT'] .'/navbar.html');
                 ?>
             <div>
-                <button onclick="document.location='Animaux_gestion.php'">Gestion des Animaux</button>
+                <button onclick="document.location='animaux_gestion.php'">Gestion des Animaux</button>
                 <button onclick="document.location='Habitat_gestion.php'">Gestion des Habitats</button>
                 <button onclick="document.location='Horaire_gestion.php'">Gestion des Horaires</button>
             </div>
