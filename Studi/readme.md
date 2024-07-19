@@ -12,7 +12,7 @@ Ce guide vous explique comment déployer l'application localement en utilisant D
 1. Clonez le dépôt de l'application sur votre machine locale :
 
     ```bash
-    git clone https://github.com/votre-utilisateur/votre-repo.git
+    git clone https://github.com/Nix3sS-coder/Arcadia_Studi
     cd votre-repo
     ```
 
