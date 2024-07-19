@@ -1,0 +1,34 @@
+services:
+  wamp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: PasswordForRoot@2023!
+      MYSQL_DATABASE: arcadia
+    networks:
+      - my_network
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: PasswordForRoot@2023!
+      MYSQL_DATABASE: arcadia
+    volumes:
+      - ./db-init:/docker-entrypoint-initdb.d  # Assurez-vous que votre dossier db-init est correctement monté ici
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
