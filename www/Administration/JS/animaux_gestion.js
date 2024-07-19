@@ -29,13 +29,14 @@ var lastclickimg = "";
         }
 
         function addimg(hab) {
-            var elt = `<div class='imgrmv' id='img${compteurnew}'>
-                    <img id="img${hab}${compteurnew}" src="UNKNOW.PNG" onclick="checkforchange('img${compteurnew}', 0)">
-                    <button onclick='removeimg("img${compteurnew}")'>-</button>
+            var elt = `<div class='imgrmv' id='img`+compteurnew+`'>
+                    <img id="img`+hab+compteurnew+`" src="UNKNOW.PNG" onclick="checkforchange('img`+compteurnew+`', 0)">
+                    <button onclick='removeimg("img`+compteurnew+`")'>-</button>
                 </div>`;
             document.getElementById('lstimg' + hab).insertAdjacentHTML('beforeend', elt);
             checkforchange('img' + hab + compteurnew, 0);
             compteurnew++;
+            lastclickimg=img+compteurnew
         }
 
         function modif(id) {

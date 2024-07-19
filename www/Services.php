@@ -19,7 +19,7 @@
         
         <?php
 
-            include('PHP/Model/infos_services.php');
+            include('PHP/Model/Infos_services.php');
             for($i=0;$i<count($services);$i++){
                 echo "<article class=\"bgelt\">";
                 echo "<h3>".$services[$i]["Nom"]."</h3>";

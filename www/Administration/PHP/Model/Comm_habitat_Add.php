@@ -8,9 +8,14 @@ try {
     if(isset($postData['habitat'], $postData['avis'], $postData['etat'], $postData['amelioration'])){
         include("infosbase.php");
 
+        if($postData['amelioration']==false){
+            $amelioration=0;
+        }else{
+            $amelioration=1;
+        }
         // Préparer et exécuter la requête SQL pour mettre à jour l'habitat
         $stmt = $conn->prepare("INSERT INTO `comm_habitat`( `Avis`, `ETAT`, `Amelioration`, `ID_Habitat`) VALUES (?,?,?,?)");
-        $stmt->execute([$postData['avis'], $postData['etat'], $postData['amelioration'],$postData['habitat']]);
+        $stmt->execute([$postData['avis'], $postData['etat'], $amelioration,$postData['habitat']]);
 
         // Réponse JSON à envoyer en retour en cas de succès
         $response = array(

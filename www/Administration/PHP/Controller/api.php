@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Fonction pour générer une chaîne aléatoire de 15 caractères
     function generateRandomString($length = 15) {
@@ -34,20 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Dossier où les images seront sauvegardées
         $uploadDir = '../../../Assets/Ajouts/';
         $uploadFile = $uploadDir . $randomFileName;
+
         // Créer le dossier s'il n'existe pas
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
         }
 
-        while(file_exist($uploadFile)){
+        // Vérifier si le fichier existe déjà et générer un nouveau nom si nécessaire
+        while (file_exists($uploadFile)) {
             $randomFileName = generateRandomString() . '.' . $fileExtension;
-
-            // Dossier où les images seront sauvegardées
-            $uploadDir = '../../../Assets/Ajouts/';
             $uploadFile = $uploadDir . $randomFileName;
         }
-        // Chemin complet pour sauvegarder le fichier avec le nom aléatoire
-        
 
         // Déplacer le fichier téléchargé vers le dossier de destination
         if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
@@ -67,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Afficher les détails de l'image téléchargée en JSON
                 echo json_encode(['randomFileName' => $randomFileName, 'filePath' => $uploadFile, 'ID' => $lastInsertId]);
             } catch (PDOException $e) {
-                echo json_encode(['error' => 'Erreur lors de la connexion à la base de données.']);
+                echo json_encode(['error' => 'Erreur lors de la connexion à la base de données: ' . $e->getMessage()]);
             }
 
             // Fermer la connexion à la base de données

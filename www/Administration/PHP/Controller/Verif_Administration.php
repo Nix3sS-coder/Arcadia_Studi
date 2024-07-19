@@ -15,12 +15,12 @@
     
                 }else{
                     echo 'Non autorisée';
-                    header('Location: ../login.php');
+                    header('Location: ../Login.php');
                 }
     
             } else {
                 echo 'Cookie invalide ou falsifié.';
-                header('Location: ../login.php');
+                header('Location: ../Login.php');
             }
     
 
