@@ -1,0 +1,59 @@
+          nav{
+                width: 100%;
+                height: 10VH;
+                background-color: rgb(65,165,141);
+                position: fixed;
+                left: 0;
+                bottom: 0;
+            }
+            nav img{
+                width: 15VW;
+                height: 15VW;
+                border-radius: 90%;
+                margin-top: -2VH;
+                margin-left: 3VW;
+            }
+            #bulle{
+                position: absolute;
+                width: 20VW;
+                height: 10VW;
+                background-color: rgb(65,165,141);
+                margin-top: -9VW;
+                z-index: -1;
+                border-radius: 5rem 5rem 0 0;
+                margin-left: 78VW;
+            }
+
+            /** 1 , 20 , 39 ,58,78 **/
+
+            @media only screen and (min-width: 780px) {
+
+
+                nav{
+                    width: 100%;
+                    height: 14VH;
+                    background-color: rgb(65,165,141);
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                #bulle{
+                    position: absolute;
+                    width: 11VW;
+                    height: 6VW;
+                    background-color: rgb(65,165,141);
+                    margin-top: -6VW;
+                    z-index: -1;
+                    border-radius: 21rem 21rem 0 0;
+                }
+                nav img{
+                    width: 7VW;
+                    height: 7VW;
+                    border-radius: 90%;
+                    margin-top: -8VH;
+                    margin-left: 11VW;
+                }
+
+                /* 9,27,45,63,83 */
+            }

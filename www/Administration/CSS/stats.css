@@ -1,0 +1,14 @@
+            #choix{
+                display:flex;
+                justify-content:space-around;
+            }
+            button{
+
+                width:20VW;
+                height:10VH;
+
+            }
+
+            #pie,#histogramme{
+                display:none;
+            }

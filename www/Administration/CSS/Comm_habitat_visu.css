@@ -1,0 +1,24 @@
+            *{
+                text-align:center
+            }
+
+            #lstcomm{
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+            }
+            button{
+                width:20VW;
+                height:5VH;
+                margin-top:3VH;
+            }
+            button , input{
+                margin-left:3VH;
+            }
+            #filtre{
+                display:flex;
+                align-items: center;
+            }
+            #filtre div , #filtre button{
+                margin-left:15VW;
+            }

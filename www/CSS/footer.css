@@ -1,0 +1,54 @@
+
+#spaceout {
+    height: 26vh;
+    width: 100%;
+}
+
+#legalmention {
+    text-align: center;
+    width:98%;
+    background-color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #333;
+    flex-direction: row;
+}
+
+footer {
+    margin-top: 5vh;
+    padding: 20px 0;
+}
+
+footer article div {
+    margin: 10px;
+    flex: 1 1 200px;
+}
+
+footer navfoot ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer navfoot ul li {
+    margin: 5px 0;
+}
+
+footer navfoot ul li a {
+    text-decoration: none;
+}
+
+footer navfoot ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    footer article div {
+        flex: 1 1 100%;
+    }
+}

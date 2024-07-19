@@ -1,0 +1,8 @@
+            section{
+                display: flex;
+    flex-direction: column;
+    align-items: center;
+            }
+            section select,section input , section button{
+                margin-top:2VH;
+            }

@@ -1,0 +1,19 @@
+            article div{
+                justify-content:space-around;
+                align-items:center;
+                display:flex;
+                flex-wrap: wrap;
+
+            }
+            article div img{
+                width:25VW;
+                height:25VH;
+                margin-top: 2VH;
+            }
+            article p{
+                margin-top: 5VH;
+                text-align:center;
+            }
+            hr{
+                margin-top:3VH;
+            }

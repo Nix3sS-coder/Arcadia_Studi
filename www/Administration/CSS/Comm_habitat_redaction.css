@@ -1,0 +1,13 @@
+            *{
+                text-align:center
+            }
+            section{
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+            }
+            input, textarea,button , input{
+                width:40VW;
+                height:5VH;
+                margin-top:3VH;
+            }

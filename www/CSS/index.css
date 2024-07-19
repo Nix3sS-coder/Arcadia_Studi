@@ -1,0 +1,42 @@
+            .nomhab{
+                text-align: center;
+                margin-left: 9VW;
+            }
+            #habitat{
+                display:flex;
+                flex-wrap: wrap;
+            }
+            section{
+                margin-top:3VH;
+            }
+            #imgzoo{
+                display:flex;
+            }
+            .avis{
+                text-align:center;
+            }
+            hr{
+                margin-top:5VH;
+            }
+            
+
+
+
+            table, th, td { border: 1px solid black; }
+            th[scope=row]{
+                width: 11VW;
+            }
+            th{
+                width: 6VW;
+            }
+            td{
+                text-align:center;
+            }
+            table{
+                margin-left:19VW;
+            }
+            img{
+                width: 30VW;
+                Height: 30VH;
+                margin-left:13VW;
+            }

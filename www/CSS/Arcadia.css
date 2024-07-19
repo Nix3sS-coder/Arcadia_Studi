@@ -1,0 +1,66 @@
+    body{
+        background-color:rgb(39,105,85) ;
+        
+    }
+   /* Définir la police de base pour le corps de la page */
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+/* Appliquer la police aux titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+/* Appliquer la police aux paragraphes */
+p {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+/* Appliquer la police aux menus */
+nav {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+/* Appliquer la police aux autres éléments de texte */
+a, li, span, div {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+    #topArcadia{
+        width: 100%;
+        height: 15VH;
+        display:flex;
+        background-color: whitesmoke;
+    }
+    #topArcadia button{
+        width: 8VW;
+    height: 2VH;
+    margin-top: 6VH;
+    margin-left:2VW;
+    }
+    #topArcadia img{
+        height: 15VH;
+    margin-left: 26VW;
+    Width: 26VW
+    }
+    .bgelt{
+                background-color: rgb(206, 204, 204);
+                padding: 2VW;
+                margin:3VW;
+            }
+
+            h1{
+                font-size:10VH;
+                text-align:center;
+            }
+            h2{
+                text-align:center;
+                font-size:7VH;
+            }
+            h3{
+                text-align:center;
+                font-size:5VH;
+            }
+            hr{
+                margin-top:5VH;
+            }

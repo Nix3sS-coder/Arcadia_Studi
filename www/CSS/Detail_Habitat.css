@@ -1,0 +1,10 @@
+            article div{
+                justify-content:space-around;
+                align-items:center;
+                display:flex;
+
+            }
+            article div img{
+                width:25VW;
+                height:25VH;
+            }

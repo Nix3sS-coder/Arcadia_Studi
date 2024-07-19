@@ -1,0 +1,12 @@
+            div{
+                display:flex;
+                flex-direction:column;
+                text-align:center;
+                font-size:3VH;
+                align-items:center;
+            }
+            button{
+                margin-top:3VH;
+                height:3VH;
+                width:20VW;
+            }

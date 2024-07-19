@@ -1,0 +1,17 @@
+h1{
+    font-size:10VH;
+    text-align:center;
+}
+h2{
+    text-align:center;
+}
+input , button{
+    width:30VW;
+    height:5VH;
+    margin-top:2VH;
+}
+article{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}

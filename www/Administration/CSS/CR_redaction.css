@@ -1,0 +1,23 @@
+            section{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            section div{
+                display:flex;
+            }
+            section div p{
+                margin-right:2VW;
+            }
+            #choixan{
+                margin-bottom:5VH;
+            }
+            button{
+                margin-top:5VH;
+                width:30VW;
+                height:10VH;
+            }
+            section div{
+                margin-top:2VH;
+            }

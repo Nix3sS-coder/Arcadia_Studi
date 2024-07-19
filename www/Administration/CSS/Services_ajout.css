@@ -1,0 +1,10 @@
+            section{
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+            }
+            button{
+                width:30VW;
+                height:10VH;
+                margin-top:5VH;
+            }

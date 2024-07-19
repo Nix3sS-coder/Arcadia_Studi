@@ -1,0 +1,7 @@
+            article{
+                display: flex;
+                margin-top:5VH;
+            }
+            article div , article button{
+                margin-left:2VW;
+            }

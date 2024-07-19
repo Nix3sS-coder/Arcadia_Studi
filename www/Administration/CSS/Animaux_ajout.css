@@ -1,0 +1,27 @@
+        img {
+            width: 5vw;
+            height: 5vw;
+        }
+        #chooseimglst {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: red;
+            top: 0;
+            overflow: scroll;
+        }
+        article div{
+            display:flex;
+        }
+        article div div{
+            margin-left:2VW;
+        }
+        #habitat1{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+        }
+        #habitat1 input,#habitat1 select,#habitat1 button{
+            margin-top:2VH;
+        }

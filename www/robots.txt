@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /Administration/
+Disallow: /CSS/
+Disallow: /PHP/
+Disallow: /JS/
+Disallow: /Login_check.php
+Disallow: /Verification_Cookie.php
+
+# Optionally, you can specify the location of your sitemap
+# Sitemap: http://www.yourwebsite.com/sitemap.xml

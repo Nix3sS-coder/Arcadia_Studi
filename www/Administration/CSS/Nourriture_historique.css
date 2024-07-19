@@ -1,0 +1,9 @@
+            section ,section article{
+                display: flex;
+            }
+            section article div, section div , section button{
+                margin-left:4VW;
+            }
+            #lstCR{
+                margin-top:5VH;
+            }

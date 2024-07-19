@@ -1,0 +1,7 @@
+section div{
+    display:flex;
+    flex-flow:space-between;
+}
+div p , div input , div button,div h4{
+    margin-left:4VW;
+}
