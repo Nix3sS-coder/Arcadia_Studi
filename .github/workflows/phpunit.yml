@@ -45,11 +45,13 @@ jobs:
           cd www
           composer install --no-progress --prefer-dist --no-interaction
 
-      # Étape 6 : Vérifier les fichiers dans vendor/bin
-      - name: List files in vendor/bin
+      # Étape 6 : Exécuter les tests PHPUnit depuis le répertoire spécifié
+      - name: Run PHPUnit tests
         run: |
-          cd www/vendor/bin
-          ls -la
+          chmod +x ../vendor/bin/phpunit  # Rendre le fichier exécutable
+          cd tests  # Naviguer dans le répertoire des tests
+          ../vendor/bin/phpunit --configuration ../phpunit.xml --colors=always
+
 
       # Étape 7 : Exécuter les tests PHPUnit depuis le répertoire spécifié
       - name: Run PHPUnit tests
