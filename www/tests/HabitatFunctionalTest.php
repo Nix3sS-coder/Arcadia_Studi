@@ -9,7 +9,7 @@ class HabitatFunctionalTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         try {
-            self::$pdo = new PDO('mysql:host=localhost;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
+            self::$pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
             self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -121,7 +121,7 @@ class HabitatFunctionalTest extends TestCase
     ];
 
     // Simuler l'affichage de la page
-    $output = $this->getOutputFromPage("http://localhost:8080/PHP/Vue/Habitat_recup_Habitat.php");
+    $output = $this->getOutputFromPage("http://127.0.0.1:8080/PHP/Vue/Habitat_recup_Habitat.php");
 
     // Vérifier que les informations sur l'habitat et les animaux sont présentes
     $this->assertStringContainsString('Savane Africaine', $output);
@@ -144,7 +144,7 @@ class HabitatFunctionalTest extends TestCase
     {
         // Simuler une requête HTTP vers la page des détails de l'habitat
         $habitatId = $this->getHabitatIdByName('Savane Africaine');
-        $output = $this->getOutputFromPage("http://localhost:8080/Detail_Habitat.php?habitat=$habitatId");
+        $output = $this->getOutputFromPage("http://127.0.0.1:8080/Detail_Habitat.php?habitat=$habitatId");
 
         // Vérifier que la page contient les animaux et leurs informations
         $this->assertStringContainsString('Simba, Lion', $output);
@@ -157,7 +157,7 @@ class HabitatFunctionalTest extends TestCase
     public function testDetailsAnimal()
     {
         $animalIdSimba = $this->getAnimalIdByName('Simba');
-        $output = $this->getOutputFromPage("http://localhost:8080/detail_animal.php?Animal=$animalIdSimba");
+        $output = $this->getOutputFromPage("http://127.0.0.1:8080/detail_animal.php?Animal=$animalIdSimba");
     
         // Vérifie la présence de certaines parties spécifiques du contenu
         $this->assertStringContainsString('<h2 class="bgelt">Simba, Lion </h2>', $output);

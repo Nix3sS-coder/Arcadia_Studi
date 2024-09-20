@@ -12,7 +12,7 @@ class AvisFunctionalTest extends TestCase
     protected function setUp(): void
     {
         // Initialiser la connexion PDO
-        $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
+        $this->pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Créer la table `avis` si elle n'existe pas
@@ -55,7 +55,7 @@ class AvisFunctionalTest extends TestCase
         $this->assertCount(2, $avisIds, 'Deux avis doivent être insérés.');
 
         // URL de la page à tester
-        $url = "http://localhost:8080/Administration/gestion_avis.php";
+        $url = "http://127.0.0.1:8080/Administration/gestion_avis.php";
 
         // Récupérer le contenu de la page avec le cookie simulé
         $output = $this->getPageContentWithCookie($url);

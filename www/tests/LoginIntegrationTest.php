@@ -10,7 +10,7 @@ class LoginIntegrationTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
+        $this->pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Créer et peupler la table utilisateur pour les tests

@@ -10,7 +10,7 @@ class ServicesFonctionnalTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
+        $this->pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $this->pdo->exec("CREATE TABLE IF NOT EXISTS `services` (
@@ -39,7 +39,7 @@ class ServicesFonctionnalTest extends TestCase
             ('Service Test 1', 'Description du Service Test 1'),
             ('Service Test 2', 'Description du Service Test 2')");
 
-        $url = "http://localhost:8080/Administration/Services_Gestion.php";
+        $url = "http://127.0.0.1:8080/Administration/Services_Gestion.php";
 
         $output = $this->getPageContentWithCookie($url);
         if ($output === false) {

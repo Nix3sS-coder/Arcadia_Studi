@@ -9,7 +9,7 @@ class HabitatIntegrationTest extends TestCase
     protected function setUp(): void
     {
         // Configuration de la connexion à la base de données
-        $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
+        $this->pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Création des tables nécessaires
@@ -57,7 +57,7 @@ class HabitatIntegrationTest extends TestCase
             ('Habitat Test 2', '{$imageIds[1]}', 'Description du Habitat Test 2')");
 
         // Vérifier l'affichage sur la page
-        $url = "http://localhost:8080/Habitat.php"; // Assure-toi que cette URL est correcte
+        $url = "http://127.0.0.1:8080/Habitat.php"; // Assure-toi que cette URL est correcte
         $output = file_get_contents($url);
         
         // Vérifier les noms et descriptions

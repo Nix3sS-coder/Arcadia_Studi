@@ -7,7 +7,7 @@ class IndexAvisTest extends TestCase {
 
     protected function setUp(): void {
         // Connexion à la base de données
-        $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
+        $this->pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Créer la table `avis` si elle n'existe pas

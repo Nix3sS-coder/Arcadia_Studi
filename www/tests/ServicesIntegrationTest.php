@@ -9,7 +9,7 @@ class ServicesIntegrationTest extends TestCase
     protected function setUp(): void
     {
         // Initialiser la connexion PDO
-        $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
+        $this->pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=arcadia', 'root', 'PasswordForRoot@2023!');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Créer la table `services` si elle n'existe pas
@@ -27,7 +27,7 @@ class ServicesIntegrationTest extends TestCase
         $this->pdo->exec("INSERT INTO services (Nom, Description) VALUES ('Service Test', 'Description Test')");
 
         // URL de la page à tester
-        $url = 'http://localhost:8080/Services.php';
+        $url = 'http://127.0.0.1:8080/Services.php';
 
         // Récupérer le contenu de la page
         $output = file_get_contents($url);
@@ -54,7 +54,7 @@ class ServicesIntegrationTest extends TestCase
         $GLOBALS['pdo'] = $pdoMock;
     
         // URL de la page à tester
-        $url = 'http://localhost:8080/Services.php';
+        $url = 'http://127.0.0.1:8080/Services.php';
     
         // Récupérer le contenu de la page
         $output = file_get_contents($url);
