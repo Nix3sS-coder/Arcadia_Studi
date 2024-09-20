@@ -33,6 +33,12 @@ jobs:
             sleep 3
           done
 
-      # Étape 5 : Exécuter PHPUnit dans le conteneur PHP/Apache
+      # Étape 3 : Installer les dépendances Composer
+      - name: Install Composer dependencies
+        run: composer install --no-progress --no-suggest --prefer-dist --no-interaction
+
+      # Étape 4 : Exécuter les tests PHPUnit depuis le répertoire spécifié
       - name: Run PHPUnit tests
-        run: docker exec php_apache_container vendor/bin/phpunit --configuration phpunit.xml --colors=always
+        run: |
+          cd www/tests  # Naviguer dans le répertoire des tests
+          ../vendor/bin/phpunit --configuration ../phpunit.xml --colors=always
