@@ -45,6 +45,18 @@ jobs:
           cd www
           composer install --no-progress --prefer-dist --no-interaction
 
+      # Étape pour forcer la réinstallation de phpunit
+      - name: Force install PHPUnit
+        run: |
+          cd www
+          composer require --dev phpunit/phpunit:^9.6
+
+      # Étape pour lister les fichiers dans vendor/bin
+      - name: List files in vendor/bin
+        run: |
+          cd www
+          ls -la vendor/bin
+
       # Étape 6 : Exécuter les tests PHPUnit depuis le répertoire spécifié
       - name: Run PHPUnit tests
         run: |
