@@ -10,9 +10,6 @@ services:
     restart: always
     depends_on:
       - mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: PasswordForRoot@2023!
-      MYSQL_DATABASE: arcadia
     networks:
       - my_network
 

@@ -17,7 +17,13 @@
         <?php include('navbar.html');
             include('./Arcadia.html') ?>
         <h2>Login</h2>
+        <?php 
+        $options = [
+            'cost' => 12,
+        ];
+        $newPWD = password_hash('PasswordForRoot@2023!', PASSWORD_BCRYPT, $options);
 
+        echo $newPWD; ?>
         <?php
         if(isset($_GET['status'])){
             if($_GET['status']="error"){

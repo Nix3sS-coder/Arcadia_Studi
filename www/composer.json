@@ -1,0 +1,11 @@
+{
+    "require": {
+        "phpunit/phpunit": "^9.6",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "autoload": {
+        "classmap": [
+            "D:/Studi/Dossier_Pro/Arcadia_Studi/www/"
+        ]
+    }
+}

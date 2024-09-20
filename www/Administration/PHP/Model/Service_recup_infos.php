@@ -12,7 +12,7 @@ try {
     $services=$stmt->fetchAll();
     //echo " resultats";
     //print_r($resultat);
-
+    // Debug : afficher les avis récupérés
 } catch (PDOException $e) {
     echo "Erreur: " . $e->getMessage();
 }

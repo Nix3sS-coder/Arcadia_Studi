@@ -19,14 +19,26 @@
         
         <?php
 
-            include('PHP/Model/Infos_services.php');
-            for($i=0;$i<count($services);$i++){
-                echo "<article class=\"bgelt\">";
-                echo "<h3>".$services[$i]["Nom"]."</h3>";
-                echo "<p>".$services[$i]["Description"]."</p>";
-            echo "</article>
-    
-            <hr>";
+
+
+
+            try {
+                include('PHP/Model/Infos_services.php');
+                
+                // Vérifiez si $services est défini et non vide
+                if (isset($services) && is_array($services) && count($services) > 0) {
+                    foreach ($services as $service) {
+                        echo "<article class=\"bgelt\">";
+                        echo "<h3>" . htmlspecialchars($service["Nom"], ENT_QUOTES, 'UTF-8') . "</h3>";
+                        echo "<p>" . htmlspecialchars($service["Description"], ENT_QUOTES, 'UTF-8') . "</p>";
+                        echo "</article><hr>";
+                    }
+                } else {
+                    echo '<p>Aucun service disponible.</p>';
+                }
+            } catch (PDOException $e) {
+                echo '<p>Erreur: Dans la récupération des Services</p>';
+                exit;
             }
 
         ?>

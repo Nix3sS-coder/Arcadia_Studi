@@ -12,7 +12,10 @@ try {
     $avis=$stmt->fetchAll();
     //echo " resultats";
     //print_r($resultat);
-
+    // Debug : afficher les avis récupérés
+    echo "<pre>";
+    print_r($avis);
+    echo "</pre>";
 } catch (PDOException $e) {
     echo "Erreur: " . $e->getMessage();
 }

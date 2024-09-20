@@ -91,6 +91,6 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
  PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO utilisateur (mail, pwd, role) VALUES ('admin@gmail.com', '$2y$12$6/8J3DFQ9EUcWX1zgVqSneRZgM22fcNho5GsgWp7wEvfbvFTvN/zO', '1');
+INSERT INTO utilisateur (mail, pwd, role) VALUES ('admin@gmail.com', '$2y$12$WIcp/2UK3cLIq/LE8A6pEeVrmFQoB8ii72d0JKTbLxc.r.mt0oSlq', '1');
 
 INSERT INTO `horaire`(`lundi`, `mardi`, `mercredi`, `jeudi`, `vendredi`, `samedi`, `dimanche`) VALUES ('08:00/11:00/12:00/19:00','08:00/11:00/12:00/19:00','08:00/11:00/12:00/19:00','08:00/11:00/12:00/19:00','08:00/11:00/12:00/19:00','08:00/11:00/12:00/19:00','08:00/11:00/12:00/19:00');

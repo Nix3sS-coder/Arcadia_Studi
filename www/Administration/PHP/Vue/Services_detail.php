@@ -1,6 +1,9 @@
 <?php
 
 include('PHP/Model/Service_recup_infos.php');
+if(!empty($services)){
+
+
 foreach($services as $serv){
     echo '<article class="bgelt">';
     echo '<div>';
@@ -16,5 +19,9 @@ foreach($services as $serv){
     echo '<button onclick="modifserv('.$serv['ID'].')">Modifier</button>';
     echo '<button onclick="suppserv('.$serv['ID'].')">Supprimer</button>';
     echo '</article>';
+}
+
+}else{
+    echo 'Aucun service disponible';
 }
 ?>
