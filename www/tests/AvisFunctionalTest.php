@@ -55,7 +55,7 @@ class AvisFunctionalTest extends TestCase
         $this->assertCount(2, $avisIds, 'Deux avis doivent être insérés.');
 
         // URL de la page à tester
-        $url = "http://127.0.0.1:8080/Administration/gestion_avis.php";
+        $url = "http://127.0.0.1:8080/Administration/Gestion_avis.php";
 
         // Récupérer le contenu de la page avec le cookie simulé
         $output = $this->getPageContentWithCookie($url);
