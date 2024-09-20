@@ -37,7 +37,7 @@ class LoginTest extends TestCase
         $_GET['pwd'] = 'ARCADIAZOO!';
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
         #echo '<pre>';
@@ -55,7 +55,7 @@ class LoginTest extends TestCase
         $_GET['pwd'] = 'wrongpassword';
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
          #echo '<pre>';
@@ -73,7 +73,7 @@ class LoginTest extends TestCase
         $_GET['pwd'] = 'password123';
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
          #echo '<pre>';

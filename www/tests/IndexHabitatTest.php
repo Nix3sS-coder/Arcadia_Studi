@@ -32,7 +32,7 @@ class IndexHabitatTest extends TestCase {
 
         // Capturer la sortie du fichier `index_recup_habitat.php`
         ob_start();
-        include(__DIR__ . '/../PHP/Vue/index_recup_habitat.php');
+        include(__DIR__ . '/../PHP/Vue/Index_recup_habitat.php');
         $output = ob_get_clean();
 
         // Vérifier que la sortie contient les noms des habitats et les images
@@ -50,7 +50,7 @@ class IndexHabitatTest extends TestCase {
 
         // Capturer la sortie du fichier `index_recup_habitat.php`
         ob_start();
-        include(__DIR__ . '/../PHP/Vue/index_recup_habitat.php');
+        include(__DIR__ . '/../PHP/Vue/Index_recup_habitat.php');
         $output = ob_get_clean();
 
         // Vérifier que la sortie contient un message ou une structure vide
@@ -68,7 +68,7 @@ class IndexHabitatTest extends TestCase {
 
         // Capturer la sortie du fichier `index_recup_habitat.php`
         ob_start();
-        include(__DIR__ . '/../PHP/Vue/index_recup_habitat.php');
+        include(__DIR__ . '/../PHP/Vue/Index_recup_habitat.php');
         $output = ob_get_clean();
 
         // Vérifier que la sortie contient un message d'erreur

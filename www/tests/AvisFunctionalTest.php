@@ -95,7 +95,7 @@ class AvisFunctionalTest extends TestCase
         $_GET['pwd'] = $password;
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
     }
 

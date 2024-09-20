@@ -44,7 +44,7 @@ class LoginFunctionalTest extends TestCase
         $_GET['pwd'] = 'Password123';
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
         // Débogage : Afficher les en-têtes pour vérifier le résultat
@@ -67,7 +67,7 @@ class LoginFunctionalTest extends TestCase
         $_GET['pwd'] = 'WrongPassword';
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
         // Débogage : Afficher les en-têtes pour vérifier le résultat
@@ -86,7 +86,7 @@ class LoginFunctionalTest extends TestCase
         $_GET['pwd'] = 'Password123';
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
         // Débogage : Afficher les en-têtes pour vérifier le résultat

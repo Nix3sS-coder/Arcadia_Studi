@@ -48,7 +48,7 @@ class LoginIntegrationTest extends TestCase
         $_GET['pwd'] = 'ARCADIAZOO!'; // Assurez-vous que ce mot de passe est correct pour l'utilisateur
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
         $this->assertContains('Location: /Administration/Menu.php', $GLOBALS['test_headers'], "L'en-tête de redirection ne contient pas '/Administration/Menu.php'.");
@@ -62,7 +62,7 @@ class LoginIntegrationTest extends TestCase
         $_GET['pwd'] = 'wrongpassword'; // Mot de passe incorrect
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
         $this->assertContains('Location: /Login.php?status=error', $GLOBALS['test_headers'], "L'en-tête de redirection ne contient pas '/Login.php?status=error'.");
@@ -76,7 +76,7 @@ class LoginIntegrationTest extends TestCase
         $_GET['pwd'] = 'password1'; // Mot de passe pour un email inexistant
 
         ob_start();
-        include(__DIR__ . '/../login_check.php');
+        include(__DIR__ . '/../Login_check.php');
         ob_end_clean();
 
         $this->assertContains('Location: /Login.php?status=error', $GLOBALS['test_headers'], "L'en-tête de redirection ne contient pas '/Login.php?status=error'.");
