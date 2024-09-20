@@ -5,7 +5,7 @@
     },
     "autoload": {
         "classmap": [
-            "D:/Studi/Dossier_Pro/Arcadia_Studi/www/"
+            "tests/"
         ]
     }
 }
