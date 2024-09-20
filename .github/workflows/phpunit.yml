@@ -45,28 +45,13 @@ jobs:
           cd www
           composer install --no-progress --prefer-dist --no-interaction
 
-      # Étape pour forcer la réinstallation de phpunit
-      - name: Force install PHPUnit
+      # Étape 6 : Rendre le fichier PHPUnit exécutable
+      - name: Make PHPUnit executable
         run: |
-          cd www
-          composer require --dev phpunit/phpunit:^9.6
+          chmod +x www/vendor/bin/phpunit
 
-      # Étape pour lister les fichiers dans vendor/bin
-      - name: List files in vendor/bin
-        run: |
-          cd www
-          ls -la vendor/bin
-
-      # Étape 6 : Exécuter les tests PHPUnit depuis le répertoire spécifié
+      # Étape 7 : Exécuter les tests PHPUnit sans phpunit.xml
       - name: Run PHPUnit tests
         run: |
-          chmod +x ../vendor/bin/phpunit  # Rendre le fichier exécutable
-          cd tests  # Naviguer dans le répertoire des tests
-          ../vendor/bin/phpunit --configuration ../phpunit.xml --colors=always
-
-
-      # Étape 7 : Exécuter les tests PHPUnit depuis le répertoire spécifié
-      - name: Run PHPUnit tests
-        run: |
-          cd www/tests
-          ../vendor/bin/phpunit --configuration ../phpunit.xml --colors=always
+          cd www
+          php vendor/bin/phpunit --colors=always tests
