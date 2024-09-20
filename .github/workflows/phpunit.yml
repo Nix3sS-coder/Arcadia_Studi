@@ -28,7 +28,7 @@ jobs:
       # Étape 4 : Attendre que MySQL soit prêt
       - name: Wait for MySQL
         run: |
-          until docker exec mysql_container mysqladmin ping -h"localhost" --silent; do
+          until docker exec arcadia_studi_mysql_1 mysqladmin ping -h"localhost" --silent; do
             echo "Waiting for MySQL to be ready..."
             sleep 3
           done
