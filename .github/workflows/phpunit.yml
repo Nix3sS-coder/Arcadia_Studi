@@ -13,16 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Vérifier la présence de composer.json
-      - name: List files in www
-        run: |
-          cd www
-          ls -la
+
 
       # Étape 1 : Cloner le repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Vérifier la présence de composer.json
+      - name: List files in www
+        run: |
+          cd www
+          ls -la
+          
       # Étape 2 : Installer Docker Compose
       - name: Set up Docker Compose
         run: sudo apt-get install docker-compose
