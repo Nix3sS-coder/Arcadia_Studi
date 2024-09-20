@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Vérifier la présence de composer.json
+      - name: List files in www
+        run: |
+          cd www
+          ls -la
+
       # Étape 1 : Cloner le repository
       - name: Checkout repository
         uses: actions/checkout@v2
